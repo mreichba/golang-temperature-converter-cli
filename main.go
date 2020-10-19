@@ -18,8 +18,8 @@ var errInvalidArguments = errors.New("Invalid arguments")
 var errReadingInput = errors.New("Error reading input")
 
 func main() {
-	if os.Args.len() != 2 {
-		return printError(errInvalidArguments)
+	if len(os.Args) != 2 {
+		printError(errInvalidArguments)
 	}
 	originUnit = strings.ToUpper(os.Args[1])
 	for {
